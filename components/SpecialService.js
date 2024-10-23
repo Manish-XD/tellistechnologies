@@ -3,19 +3,19 @@ import Image from "next/image";
 import Card from "./Card";
 import spiral from "../public/spiral.png";
 
-const styles = {
-    outerContainer: "flex justify-center bg-[#FDF5F3] py-[110px] md:mt-[0px] mt-[100px]",
-    container: "max-w-[1200px] w-full md:px-[0px] px-[20px]",
-    HeadingContainer: "text-center flex flex-col items-center mb-[95px]",
-    heading: "font-light text-[#023A15] text-[50px] md:text-[60px] font-cormorant",
-    strong: "font-light font-cormorant relative",
-    strongSpiral: "absolute top-[20%] left-0 w-full",
-    para: "mt-[20px] text-[#567C49]  md:w-[560px]",
-    row: "flex flex-col md:flex-row justify-between"
-}; 
 
-function SpecialService() 
+function SpecialService({about}) 
 {
+    const styles = {
+        outerContainer: `flex justify-center ${about?'bg-[#023A15]':'bg-[#FDF5F3]'} py-[110px] md:mt-[0px] mt-[100px]`,
+        container: "max-w-[1200px] w-full md:px-[0px] px-[20px]",
+        HeadingContainer: "text-center flex flex-col items-center mb-[95px]",
+        heading: `font-light ${about?'text-white':'text-[#023A15]'} text-[50px] md:text-[60px] font-cormorant`,
+        strong: "font-light font-cormorant relative",
+        strongSpiral: "absolute top-[20%] left-0 w-full",
+        para: `mt-[20px] ${about?'text-white':'text-[#567C49]'}  md:w-[560px]`,
+        row: "flex flex-col md:flex-row justify-between"
+    }; 
     return (
         <div className={styles.outerContainer}>
             <div className={styles.container}>

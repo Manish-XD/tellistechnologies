@@ -24,7 +24,7 @@ function ContactForm()
                     <input type="email" className={`${styles.input} md:mr-[20px] mb-[25px] md:mb-[0px]`} name="FirstName" placeholder="Email" required/>
                     <input type="number" className={styles.input} name="FirstName" placeholder="Phone" required/>
                 </div>
-                <textarea className={`${styles.input} rounded-[30px] h-max-[10rem] mb-[20px]`} rows={4} draggable="false" placeholder="Message"/>
+                <textarea className={`${styles.input} rounded-[20px] h-max-[10rem] mb-[20px]`} rows={4} draggable="false" placeholder="Message"/>
                 <Button title={"JOIN MEMBERSHIP"} ctn/>
             </form>
             <Image src={lightSemicircle} alt="light semicircle vector design" className={`${styles.lightSemicircle} md:top-[-80px] md:left-[-100px] top-[-50px] left-[-50px] rotate-[330deg]`}/>

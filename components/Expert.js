@@ -5,22 +5,22 @@ import expert1 from "../public/brown-D9SR4HS-1536x768.jpg";
 import expert2 from "../public/woman-holding-grapefruit-HV8L8KM-1536x768.jpg";
 import spiral from "../public/spiral.png";
 
-const styles = {
-    outerContainer: "flex justify-center bg-[#FDF5F3]",
-    container: "max-w-[1200px] w-full py-[50px] md:py-[100px] flex flex-col-reverse md:flex-row px-[20px] md:px-[0px]",
-    left: "w-full md:w-[50%] flex flex-col justify-center",
-    right: "w-full md:w-[50%] md:pl-[100px]",
-    circle: "bg-white absolute top-[45%] right-[40px] z-[10] rounded-full px-[20px] py-[16px] cursor-pointer",
-    svg: "w-[20px]",
-    heading: "font-light font-cormorant text-[40px] md:text-[60px] text-[#023A15] leading-[1.3em]",
-    strong: "font-light font-cormorant text-[40px] md:text-[60px] text-[#023A15] relative",
-    strongSpiral: "absolute bottom-0 left-0",
-    para: "py-[30px] text-[#567C49]",
-    listItems: "text-[#319E48] flex items-center mb-[16px]",
-    svgListItems: "fill-[#319E48] w-[20px] mr-[16px]"
-}
 
-function Expert() {
+function Expert({services}) {
+    const styles = {
+        outerContainer: "flex justify-center bg-[#FDF5F3]",
+        container: `max-w-[1200px] w-full py-[50px] md:py-[100px] flex ${services?'flex-col md:flex-row-reverse':'flex-col-reverse md:flex-row'} px-[20px] md:px-[0px]`,
+        left: "w-full md:w-[50%] flex flex-col justify-center",
+        right: `w-full md:w-[50%] ${services?'md:pr-[100px]':'md:pl-[100px]'}`,
+        circle: "bg-white absolute top-[45%] right-[40px] z-[10] rounded-full px-[20px] py-[16px] cursor-pointer",
+        svg: "w-[20px]",
+        heading: "font-light font-cormorant text-[40px] md:text-[60px] text-[#023A15] leading-[1.3em]",
+        strong: "font-light font-cormorant text-[40px] md:text-[60px] text-[#023A15] relative",
+        strongSpiral: "absolute bottom-0 left-0",
+        para: "py-[30px] text-[#567C49]",
+        listItems: "text-[#319E48] flex items-center mb-[16px]",
+        svgListItems: "fill-[#319E48] w-[20px] mr-[16px]"
+    }
   return (
     <div className={styles.outerContainer}>
         <div className={styles.container}>

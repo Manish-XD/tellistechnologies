@@ -5,18 +5,18 @@ import reviewImage from "../public/lifting-anti-wrinkle-collagen-patches-under-e
 import dashedLine from "../public/dashedLine.png";
 import lightSemicircle from "../public/lightSemicircle.png";
 
-const styles = {
-    container: "flex flex-col md:flex-row relative",
-    left: "w-full md:w-[50%] flex items-center md:pl-[150px] md:pr-[100px] px-[20px] mt-[50px] md:mt-[0px] pb-[100px]",
-    right: "w-full md:w-[50%]",
-    heading: "text-white text-[40px] md:text-[60px] font-light font-cormorant leading-[1.3em] mb-[60px] text-center md:text-left",
-    strong: "text-white text-[40px] md:text-[60px] font-light font-cormorant relative",
-    dashedLine: "absolute bottom-0 left-0",
-    lightSemicircle: "absolute left-[40%] bottom-[-2px] w-[290px] hidden",
-    content: "min-w-[80%]"
-};
 
-function Review({ images = [1, 2, 3, 4, 5] }) {
+function Review({ images = [1, 2, 3, 4, 5], services }) {
+    const styles = {
+        container: `flex ${services?'flex-col-reverse md:flex-row-reverse':'flex-col md:flex-row'} relative`,
+        left: "w-full md:w-[50%] flex items-center md:pl-[150px] md:pr-[100px] px-[20px] mt-[50px] md:mt-[0px] pb-[100px]",
+        right: "w-full md:w-[50%]",
+        heading: "text-white text-[40px] md:text-[60px] font-light font-cormorant leading-[1.3em] mb-[60px] text-center md:text-left",
+        strong: "text-white text-[40px] md:text-[60px] font-light font-cormorant relative",
+        dashedLine: "absolute bottom-0 left-0",
+        lightSemicircle: "absolute left-[40%] bottom-[-2px] w-[290px] hidden",
+        content: "min-w-[80%]"
+    };
     const [currentIndex, setCurrentIndex] = useState(0);
 
     // Auto-scroll after every 1 second
@@ -91,7 +91,7 @@ function Review({ images = [1, 2, 3, 4, 5] }) {
                     </div>
 
                     {/* Previous Button */}
-                    <div className="absolute bottom-[-70px] left-[30%] md:bottom-0 md:right-0 z-[10]">
+                    <div className="absolute bottom-[-70px] left-[30%] md:bottom-0 md:left-[70%] z-[10]">
                         <button onClick={prevSlide}>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-[40px] fill-white mr-[20px]"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" /></svg>
                         </button>

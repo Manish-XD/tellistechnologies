@@ -20,7 +20,7 @@ import HeroSecondary from "@/components/HeroSecondary";
 
 const styles ={
   container: "bg-primaryGreen",
-  heroOuter: "flex justify-center mt-[50px] pb-[100px]",
+  heroOuter: "flex justify-center mt-[150px] pb-[100px]",
   hero: "md:flex-row flex-col flex max-w-[1200px] w-[1200px] md:px-0 px-[20px]",
   heroLeft: "w-full md:w-[40%] mt-[50px]",
   heroHeading: "text-white text-[50px] md:text-[75px] font-light leading-[1.2em] italic",

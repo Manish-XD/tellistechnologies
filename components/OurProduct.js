@@ -2,6 +2,7 @@ import Image from "next/image";
 import Button from "./Button";
 import { useEffect, useState } from "react";
 import GateShapeImage from "./GateShapeImage";
+import Link from "next/link";
 
 import dashedLine from "../public/dashedLine.png";
 
@@ -61,14 +62,26 @@ function OurProduct({images = [1,2,3]})
           style={{ transform: `translateX(-${currentIndex * 33}%)` }}
         >
             <div className="flex min-w-full">
+                <Link href="/products" className="w-full mr-[40px]">
                 <GateShapeImage src={"/heroSec1.jpg"} alt={"testing"} height={360} marginRight={"40px"}/>
+                </Link>
+                <Link href="/products" className="w-full mr-[40px]">
                 <GateShapeImage src={"/heroSec1.jpg"} alt={"testing"} height={360} marginRight={"40px"}/>
+                </Link>
+                <Link href="/products" className="w-full mr-[40px]">
                 <GateShapeImage src={"/heroSec1.jpg"} alt={"testing"} height={360} marginRight={"40px"}/>
+                </Link>
             </div>
             <div className="flex min-w-full">
+            <Link href="/products" className="w-full mr-[40px]">
                 <GateShapeImage src={"/heroSec1.jpg"} alt={"testing"} height={360} marginRight={"40px"}/>
+                </Link>
+                <Link href="/products" className="w-full mr-[40px]">
                 <GateShapeImage src={"/heroSec1.jpg"} alt={"testing"} height={360} marginRight={"40px"}/>
+                </Link>
+                <Link href="/products" className="w-full mr-[40px]">
                 <GateShapeImage src={"/heroSec1.jpg"} alt={"testing"} height={360} marginRight={"40px"}/>
+                </Link>
             </div>
         </div>
         <div

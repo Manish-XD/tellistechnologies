@@ -4,9 +4,10 @@ import GateShapeImage from "./GateShapeImage";
 import darkSemicircle from "../public/darkSemicircle.png";
 import lightSemicircle from "../public/lightSemicircle.png";
 import spiral from "../public/spiral.png";
+import sign from "../public/sign.png";
 
 const styles = {
-    heroSecondary: "w-full md:flex-row flex-col flex bg-[#FDF5F3] md:py-[188px] md:px-[100px] px-[20px] py-[100px]",
+    heroSecondary: "w-full md:flex-row flex-col flex bg-[#FDF5F3] md:py-[188px] md:px-[100px] px-[20px] py-[100px] items-center",
     heroSecLeft: "w-full md:w-[30%] relative",
     heroSecMiddle: "w-full md:w-[40%] flex flex-col items-center text-center px-[45px] pt-[66px]",
     heroSecMiddleSpan: "text-[#023A15] font-bold",
@@ -17,7 +18,7 @@ const styles = {
     heroSecRight: "w-full md:w-[30%] relative mt-[66px] md:mt-[0px]"
 }
 
-function HeroSecondary() 
+function HeroSecondary({about}) 
 {
     return (
         <div className={styles.heroSecondary}>
@@ -33,6 +34,10 @@ function HeroSecondary()
                 <Image src={spiral} alt="spiral design" className={styles.heroSecMiddleStrongSpiral}/>
               </strong>
               <p className={styles.heroSecMiddlePara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis sed sapien in pretium. Donec tincidunt, quam.</p>
+              {about && <div>
+                <Image src={sign} alt="Jerry Adam Signature" className="mt-[60px] mb-[10px]"/>
+                <span className="text-[#567C49]">Founder & CEO of Chloro</span>
+              </div>}
             </div>
             <div className={styles.heroSecRight}>
               <Image src={darkSemicircle} alt="semi circle vector design" className="absolute z-[10] md:z-[10] rotate-[160deg] bottom-[-50px] md:bottom-[-100px] right-0 md:right-[-80px] w-[160px] md:w-[290px]"/>
